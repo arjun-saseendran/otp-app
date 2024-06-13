@@ -2,18 +2,24 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
+
+const renderInput = () => {
+return <input type="text" className="w-16 h-12 rounded-md mr-3 text-center text-xl" />
+
+}
+
   return (
     <form action="">
-      <h1>fill in the otp</h1>
+      <h1 className="text-3xl mb-8">Please fill in the otp</h1>
       <div>
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
+      {renderInput()}
+        {renderInput()}
+        {renderInput()}
+        {renderInput()}
+        {renderInput()}
+        {renderInput()}
       </div>
-      <button>Submit</button>
+      <button className="mt-4 w-32 border border-solid bg-[#3b3b3b] rounded hover:bg-[#252525] hover:border-[#3b3b3b]">Submit</button>
     </form>
   );
 }
